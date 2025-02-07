@@ -5,11 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [
     react(),
+    
     tailwindcss()
-  ],
+  ], base: "./",
   build: {
     rollupOptions: {
-      external: ["framer-motion", "lucide-react", "react-icons","react-icons/fa"]
+      external: ["lucide-react", "react-icons","react-icons/fa"]
     },
   },
 });
