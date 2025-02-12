@@ -5,6 +5,7 @@ import Main from './Components/Main'
 import Skills from './Components/Skills'
 import Projects from './Components/Projects'
 import Contact from './Components/Contact'
+import { motion } from "framer-motion";
 
 
 import Navbar from './Components/Navbar'
