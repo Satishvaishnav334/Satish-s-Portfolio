@@ -56,6 +56,16 @@ const Skills = () => {
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg", // CSS logo
       description: "A style sheet language used for describing the presentation of a document written in HTML.",
     },
+    {
+      title:"C++",
+      logo:"https://th.bing.com/th?id=OIP.7AozP0wxaQMnJoO3jzsj3QHaH5&w=242&h=258&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      description:"Familiar with C++ basics, including variables, loops, functions, arrays, and OOP concepts like classes and objects. Able to write simple programs. "
+    },
+    {
+      title:"Python",
+      logo:"https://th.bing.com/th?id=OIP.kbO1T90NqtfN3K-K58a20wHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      description:"Basic understanding of Python, including data types, control structures, functions, and object-oriented programming. Able to write and debug simple programs."
+    }
   ];
 
   return (
