@@ -9,9 +9,16 @@ export default defineConfig({
     tailwindcss()
   ], base: "./",
   build: {
+    
+      "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
+      ]
+    ,
     rollupOptions: {
       external: [ "lucide-react", "react-icons","react-icons/fa"]
     },
-  
+    
   },
+
 });
+

@@ -19,7 +19,7 @@ const Projects = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               >
-              <img src='./chat.png'  className="w-full h-40 object-cover rounded-md mb-4" />
+              <img src='/chat.png'  className="w-full h-40 object-cover rounded-md mb-4" />
               <h3 className="text-xl font-semibold">Chatbot AI</h3>
               <p className="text-gray-400 mb-4">A chatbot integrated with OpenAI API for real-time conversation.</p>
               <a 
@@ -35,7 +35,7 @@ const Projects = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               >
-              <img src='public/sportify.png' className="w-full h-40 object-cover rounded-md mb-4" />
+              <img src='/sportify.png' className="w-full h-40 object-cover rounded-md mb-4" />
               <h3 className="text-xl font-semibold">Sportfy Music streming</h3>
               <p className="text-gray-400 mb-4">An music steming platform with song list and basic features.</p>
               <a 
@@ -51,7 +51,7 @@ const Projects = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               >
-              <img src='public/image.png' className="w-full h-40 object-cover rounded-md mb-4" />
+              <img src='/image.png' className="w-full h-40 object-cover rounded-md mb-4" />
               <h3 className="text-xl font-semibold">Portfolio Website</h3>
               <p className="text-gray-400 mb-4">A personal portfolio built with React and Tailwind CSS.</p>
               <a 

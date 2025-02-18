@@ -27,7 +27,7 @@ const Main = () => {
       </div>
 
       <img
-        src="./bg.png"
+        src="/bg.png"
         alt="Profile Image"
         className="w-40 sm:w-80 mt-20 md:w-105 lg:w-96 h-auto min-w-80  rounded-2xl mb-6 md:mb-0 object-cover shadow-xl  shadow-blue-300"
       />
