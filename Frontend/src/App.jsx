@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-     <Navbar></Navbar>
+    <Navbar></Navbar>
      <Main></Main>
      <About></About>
      <Skills></Skills>
