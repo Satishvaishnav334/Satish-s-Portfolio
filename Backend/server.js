@@ -3,6 +3,13 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://www.satishvaishnav.in', // Replace with your frontend domain
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+  credentials:true
+}));
 const app = express();
 app.use(express.json());
 app.use(cors());
