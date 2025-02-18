@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +15,8 @@ const Navbar = () => {
           <a href="#contact" className=" hover:text-gray-500">Contact</a>
         </div>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          
+         
         </div>
       </div>
       <div 
