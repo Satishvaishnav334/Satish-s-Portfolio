@@ -12,5 +12,7 @@ export default defineConfig({
     rollupOptions: {
       external: ["framer-motion", "lucide-react", "react-icons","react-icons/fa"]
     },
+    optimizeDeps: {
+      include: ['framer-motion']}
   },
 });
