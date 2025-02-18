@@ -1,4 +1,3 @@
-import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
 
@@ -46,19 +45,19 @@ const Contact = () => {
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
       <div className="space-y-4">
         <a href="mailto:satishvaishna@gmail.com" className="flex items-center justify-start space-x-2 text-blue-500 hover:underline">
-          <FaEnvelope />
+          
           <span>satishvaishna@gmail.com</span>
         </a>
         <a href="https://linkedin.com/in/satish-vaishnav" target="_blank" rel="noopener noreferrer" className="flex items-center justify-start space-x-2 text-blue-700 hover:underline">
-          <FaLinkedin />
+         
           <span>LinkedIn</span>
         </a>
         <a href="https://github.com/Satishvaishnav334" target="_blank" rel="noopener noreferrer" className="flex items-center justify-start space-x-2 text-white-800 hover:underline">
-          <FaGithub />
+          
           <span>GitHub</span>
         </a>
         <button onClick={handleDownloadResume} className="flex items-center justify-center space-x-2 text-green-600 hover:underline">
-          <FaFileAlt />
+          
           <span>Download Resume</span>
         </button>
       </div>
