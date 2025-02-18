@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import bg from "./assets/bg.png";
 
 const Main = () => {
   return (
@@ -7,7 +5,7 @@ const Main = () => {
       id="home"
       className="flex flex-col-reverse md:flex-row items-center justify-around text-center px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 lg:py-20 mb-0 min-h-screen"
     >
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -26,10 +24,10 @@ const Main = () => {
         >
           View My Work
         </a>
-      </motion.div>
+      </div>
 
       <img
-        src={bg}
+        src="./bg.png"
         alt="Profile Image"
         className="w-40 sm:w-80 mt-20 md:w-105 lg:w-96 h-auto min-w-80  rounded-2xl mb-6 md:mb-0 object-cover shadow-xl  shadow-blue-300"
       />

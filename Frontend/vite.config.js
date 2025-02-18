@@ -10,9 +10,8 @@ export default defineConfig({
   ], base: "./",
   build: {
     rollupOptions: {
-      external: ["framer-motion", "lucide-react", "react-icons","react-icons/fa"]
+      external: [ "lucide-react", "react-icons","react-icons/fa"]
     },
-    optimizeDeps: {
-      include: ['framer-motion']}
+  
   },
 });

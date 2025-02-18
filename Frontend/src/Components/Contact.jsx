@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
@@ -38,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div 
+    <div 
       className="max-w-lg md:mx-auto m-5 p-8 bg-gray-800 shadow-lg rounded-2xl text-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -98,7 +97,7 @@ const Contact = () => {
           {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
-    </motion.div>
+    </div>
   );
 };
 

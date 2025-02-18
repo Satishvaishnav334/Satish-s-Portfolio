@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 
 // Skill Card Component
 const SkillCard = ({ logo, title, description }) => (
-  <motion.div
+  <div
     className="bg-gray-800 text-white rounded-lg shadow-lg p-6 w-64 m-4 flex flex-col items-center"
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
@@ -10,7 +9,7 @@ const SkillCard = ({ logo, title, description }) => (
     <img src={logo} alt={title} className="h-16 mb-4" />
     <h3 className="text-2xl font-semibold text-blue-400 mb-2">{title}</h3>
     <p className="text-gray-300 text-center">{description}</p>
-  </motion.div>
+  </div>
 );
 
 // Main Skills Section
@@ -73,7 +72,7 @@ const Skills = () => {
       id="skills"
       className="flex flex-col items-center justify-center min-h-screen  text-white px-6 py-12"
     >
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -83,7 +82,7 @@ const Skills = () => {
         <p className="text-xl text-gray-300">
           Here are the technologies and tools I am proficient in.
         </p>
-      </motion.div>
+      </div>
 
       <div className="flex flex-wrap justify-center">
         {skillsData.map((skill, index) => (

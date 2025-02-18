@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +21,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <motion.div 
+      <div 
         initial={{ opacity: 0, y: -20 }}
         animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -32,7 +31,7 @@ const Navbar = () => {
         <a href="#about" className="text-white hover:text-gray-300">About</a>
         <a href="#projects" className="text-white hover:text-gray-300">Projects</a>
         <a href="#contact" className="text-white hover:text-gray-300">Contact</a>
-      </motion.div>
+      </div>
     </nav>
   );
 };

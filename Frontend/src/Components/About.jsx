@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -6,7 +5,7 @@ const About = () => {
       id="about"
       className="flex flex-col items-center justify-center  text-white px-6 py-12"
     >
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -27,7 +26,7 @@ const About = () => {
           My goal is to become proficient in the MERN stack and build full-stack
           applications that solve real-world problems.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 };
