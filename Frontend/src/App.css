@@ -2,7 +2,7 @@
 
 body{
   /* background-color: gray; */
-  background-image:url("background.jpg");
+  background-image:url("../public/background.jpg");
   background-size: cover; /* Cover the entire screen */
   background-position: center center; /* Center the image */
   background-attachment: fixed; /* Keep the background fixed when scrolling */
