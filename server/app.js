@@ -3,16 +3,18 @@ import routes from './routes/healthRoute.js';
 import cors from "cors";
 
 const app = express();
-app.use(cors({
-
-  origin:'https://www.satishvaishnav.in/'
-}
-))
+app.use(cors({origin:'https://www.satishvaishnav.in'}));
+app.use(cors())
 const corsOptions = {
   origin: process.env.ACCESS_CONTROL_ORIGIN,
   credentials: true,
   optionsSuccessStatus: 200
 };
+app.use(cors({
+  origin: "https://www.satishvaishnav.in",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(cors(corsOptions));
 app.use(express.json({ limit: "16kb" }));
