@@ -14,7 +14,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://satish-s-portfolio-ggmq.vercel.app/api/contact", formData);
+      const response = await axios.post("http://localhost:8000/contact", formData);
       alert("Message sent successfully!");
       console.log(response.data);
       setFormData({ name: "", email: "", message: "" });

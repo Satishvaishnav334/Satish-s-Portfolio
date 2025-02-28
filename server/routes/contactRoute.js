@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
         .json({ success: false, message: "All fields are required" });
     }
 
-    const newContact = new ContactSchema({ name, email, message });
+    const newContact = new Contact({ name, email, message });
     await newContact.save();
 
     res.json({ success: true, message: "Message saved successfully!" });

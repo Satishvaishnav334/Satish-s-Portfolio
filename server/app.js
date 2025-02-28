@@ -3,6 +3,11 @@ import routes from './routes/healthRoute.js';
 import cors from "cors";
 
 const app = express();
+app.use(cors({
+
+  origin:'http://localhost:5173'
+}
+))
 const corsOptions = {
   origin: process.env.ACCESS_CONTROL_ORIGIN,
   credentials: true,
@@ -22,5 +27,9 @@ import contactRoute from "./routes/contactRoute.js"
 
 app.use("/", healthRouter)
 app.use("/contact", contactRoute)
+
+app.get("/contact",(req,res)=>{
+  res.get("Hello contact")
+})
 
 export default app;
