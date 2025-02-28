@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import connectDB from './src/DB/index.js';
+
 const connectDB =async ()=>{
     try{
         const connectionString = await mongoose.connect(`${process.env.MONGO_URI}`)
@@ -17,7 +17,7 @@ dotenv.config(); // Load environment variables
 const app = express();
 app.use(
   cors({
-    origin:'https://www.satishvaishnav.in/'
+    origin:process.env.FRONTEND_URI
   })
 )
 app.use(express.json());
@@ -63,6 +63,7 @@ router.get('/', (req, res) => {
 });
 
 app.use('/api', router);
+
 app.get('/test',(req,res)=>{
   res.send("HAre Krishna")
 })
