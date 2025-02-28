@@ -1,44 +1,63 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import connectDB from './src/DB/index.js';
+
+dotenv.config(); // Load environment variables
+
 const app = express();
-
-app.use(cors({
-  origin: 'https://www.satishvaishnav.in', // Replace with your frontend domain
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-  credentials:true
-}));
+app.use(
+  cors({
+    origin:'https://www.satishvaishnav.in/'
+  })
+)
 app.use(express.json());
-app.use(cors());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// Connect to MongoDB
+connectDB();
 
-// Define Schema
-const ContactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  message: String,
-});
+// Define Mongoose Schema
+const ContactSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    message: { type: String, required: true },
+  },
+  { timestamps: true }
+);
 
-const Contact = mongoose.model("Contact", ContactSchema);
+const Contact = mongoose.model('Contact', ContactSchema);
 
-// API Route to Handle Form Submission
-app.post("/api/contact", async (req, res) => {
+// Contact Route
+const router = express.Router();
+
+router.post('/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
+    if (!name || !email || !message) {
+      return res.status(400).json({ success: false, message: 'All fields are required' });
+    }
+
     const newContact = new Contact({ name, email, message });
     await newContact.save();
-    res.json({ success: true, message: "Message saved successfully!" });
+
+    res.json({ success: true, message: 'Message saved successfully!' });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Error saving message" });
+    console.error('Error saving message:', error);
+    res.status(500).json({ success: false, message: 'Error saving message' });
   }
 });
 
-// Start Server
-app.listen(5000, () => console.log("Server running on port 5000"));
+// API Health Check
+router.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
+app.use('/api', router);
+app.get('/test',(req,res)=>{
+  res.send("HAre Krishna")
+})
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

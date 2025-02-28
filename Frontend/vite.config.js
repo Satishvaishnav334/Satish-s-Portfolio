@@ -5,11 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 
 export default defineConfig({
-  server:{
-    Proxy:{
-      '/api/contact':'https://satish-s-portfolio-y58d.vercel.app'
-    }
-  },
   plugins: [
    
     react(),
