@@ -3,7 +3,15 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './src/DB/index.js';
-
+const connectDB =async ()=>{
+    try{
+        const connectionString = await mongoose.connect(`${process.env.MONGO_URI}`)
+        console.log(`${connectionString.connection.host}`)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
 dotenv.config(); // Load environment variables
 
 const app = express();
