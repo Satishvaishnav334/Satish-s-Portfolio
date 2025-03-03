@@ -5,6 +5,9 @@ import contactRoute from "./routes/contactRoute.js";
 
 const app = express();
 
+app.use(cors({
+  origin:'https://www.satishvaishnav.in/'
+}))
 // ✅ Set CORS Configuration
 const corsOptions = {
   origin: "https://www.satishvaishnav.in", // Allow frontend domain
@@ -30,7 +33,7 @@ app.use("/", healthRouter);
 app.use("/contact", contactRoute);
 
 // ✅ Test Route to Check Server is Running
-app.get("/contact/test", (req, res) => {
+app.get("/contact", (req, res) => {
   res.send("CORS is working properly!");
 });
 
