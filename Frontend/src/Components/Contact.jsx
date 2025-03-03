@@ -29,7 +29,7 @@ const Contact = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = "/Satish_Resume.pdf";
-    link.download = "resume.pdf";
+    link.download = "Satish_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
