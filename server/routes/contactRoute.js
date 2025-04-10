@@ -2,9 +2,10 @@ import { Router } from "express";
 import Contact from "../models/contactModel.js"
 
 const router = Router();
-router.post("/", async (req, res) => {
+router.post('/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
+    console.log(req.body)
     if (!name || !email || !message) {
       return res
         .status(400)
