@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 const Main = () => {
   return (
     <section
-      className="flex font-mono flex-col-reverse md:flex-row items-center justify-around px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 lg:py-20  min-h-screen"
+      className="flex font-mono flex-col-reverse md:flex-row items-center justify-around px-2 sm:px-6 md:px-5 lg:px-5 py-10 md:py-10 lg:py-10  min-h-screen"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col max-w-3xl mt-5 bg-zinc-300 rounded-2xl p-10 w-full shadow-lg text-left"
+        className="flex flex-col max-w-3xl mt-5 bg-zinc-300 rounded-2xl p-6 w-full shadow-lg text-left"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

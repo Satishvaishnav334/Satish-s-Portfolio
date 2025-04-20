@@ -1,32 +1,88 @@
+import { motion } from "framer-motion";
 
 const About = () => {
+  const textVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center  text-white px-6 py-12"
+      className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12 min-h-screen font-sans"
     >
-      <div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-4xl  bg-gray-900 p-10 text-center rounded-2xl"
+      {/* Info Card */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="w-full max-w-md bg-zinc-300 p-8 rounded-2xl shadow-lg text-left text-black font-mono"
       >
-        <h2 className="text-4xl font-bold text-blue-400  mb-6">About Me</h2>
-        <p className="text-xl text-gray-300 mb-4">
-          Hi, I'm <span className="text-blue-400">Satish</span>, a passionate
-          web developer currently pursuing a BCA degree in my 2nd year at{" "}
-          <span className="text-blue-400">Silver Oak University, Ahmedabad</span>.
-        </p>
-        <p className="text-lg text-gray-300 mb-4">
-          I am deeply focused on learning the{" "}
-          <span className="text-blue-400">MERN stack</span> and building modern,
-          scalable web applications.
-        </p>
-        <p className="text-lg text-gray-300">
-          My goal is to become proficient in the MERN stack and build full-stack
-          applications that solve real-world problems.
-        </p>
-      </div>
+        <motion.h2
+          variants={textVariant}
+          className="text-3xl md:text-4xl font-bold text-indigo-600 mb-6"
+        >
+          About Me
+        </motion.h2>
+
+        <motion.p variants={textVariant} custom={1} className="text-lg mb-4">
+          Hi, I'm <span className="text-indigo-600">Satish</span>, a passionate web developer currently pursuing my BCA (2nd year) at{" "}
+          <span className="text-indigo-600">Silver Oak University, Ahmedabad</span>.
+        </motion.p>
+
+        <motion.p variants={textVariant} custom={2} className="text-lg mb-4">
+          My primary focus is on mastering the{" "}
+          <span className="text-indigo-600 font-semibold">MERN Stack</span> and building
+          modern, scalable web apps.
+        </motion.p>
+
+        <motion.p variants={textVariant} custom={3} className="text-lg mb-4">
+          <span className="text-green-600 font-semibold">Goal:</span> Become a
+          full-stack developer solving real-world problems through tech.
+        </motion.p>
+
+        <motion.p variants={textVariant} custom={4} className="text-lg">
+          <span className="text-yellow-600 font-semibold">Interest:</span> Hackathons,
+          UI/UX design, problem solving, and{" "}
+          <span className="text-pink-600 font-semibold">currently learning Cybersecurity</span> to expand my technical depth.
+        </motion.p>
+      </motion.div>
+
+      {/* Achievements Card */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="w-full max-w-md bg-zinc-300 p-8 rounded-2xl shadow-lg text-left text-black"
+      >
+        <motion.h2
+          variants={textVariant}
+          className="text-3xl md:text-4xl font-bold text-indigo-600 mb-6"
+        >
+          Achievements
+        </motion.h2>
+
+        <motion.ul className="list-disc list-inside text-lg space-y-3">
+          <motion.li variants={textVariant} custom={1}>
+            🏆 <span className="text-indigo-600 font-semibold">1st Prize</span> in{" "}
+            <span className="text-purple-600 font-semibold">Brahma Code Hackathon</span> at SKIP University.
+          </motion.li>
+          <motion.li variants={textVariant} custom={2}>
+            📜 Received multiple certificates in web development, UI/UX, and coding challenges.
+          </motion.li>
+          <motion.li variants={textVariant} custom={3}>
+            🚀 Participated in 5+ hackathons and collaborative tech events.
+          </motion.li>
+        </motion.ul>
+      </motion.div>
     </section>
   );
 };
