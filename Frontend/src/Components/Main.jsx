@@ -24,7 +24,7 @@ const Main = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="sm:text-lg md:text-2xl text-xl text-black mb-6"
+          className="sm:text-lg md:text-2xl text-lg text-black mb-6"
         >
           I'm a passionate{" "}
           <span className="text-blue-600 font-semibold">Full Stack Developer</span>{" "}
@@ -46,7 +46,7 @@ const Main = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="w-40 sm:w-80 mt-15 md:w-105 lg:w-96 h-auto min-w-80 rounded-2xl mb-6 md:mb-0 object-cover shadow-xl shadow-blue-300"
+        className="w-35 sm:w-80 mt-15 md:w-105 lg:w-96 h-auto min-w-80 rounded-2xl mb-6 md:mb-0 object-cover shadow-xl shadow-blue-300"
       />
     </section>
   );
