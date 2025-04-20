@@ -1,35 +1,52 @@
+import { motion } from "framer-motion";
 
 const Main = () => {
   return (
     <section
-      id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-around text-center px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 lg:py-20 mb-0 min-h-screen"
+      className="flex font-mono flex-col-reverse md:flex-row items-center justify-around px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 lg:py-20  min-h-screen"
     >
-      <div
-        initial={{ opacity: 0, y: 20 }}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" flex flex-wrap max-w-3xl bg-blue-950 rounded-2xl m-15 p-15 w-full"
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col max-w-3xl mt-5 bg-zinc-300 rounded-2xl p-10 w-full shadow-lg text-left"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4">
-          Hi, I'm <span className="text-blue-400">Satish Kumar</span>
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl text-white mb-6">
-          I'm a passionate{" "}
-          <span className="text-blue-300  font-semibold">Web Developer</span> with a love for creating beautiful and functional websites.
-        </p>
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition"
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-black mb-4"
         >
-          View My Work
-        </a>
-      </div>
+          Hi, I'm <span className="text-gray-600">Satish Vaishnav</span>
+        </motion.h1>
 
-      <img
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="sm:text-lg md:text-2xl text-xl text-black mb-6"
+        >
+          I'm a passionate{" "}
+          <span className="text-blue-600 font-semibold">Full Stack Developer</span>{" "}
+          currently Work at <span className="text-purple-700 font-bold">TechySquad</span>, where I build scalable web applications.
+          I’m also an enthusiastic{" "}
+          <span className="text-green-700 font-semibold">Hackathon participant</span>{" "}
+          who loves solving real-world problems through tech.
+        </motion.p>
+
+        <div className="mt-4">
+          <h2 className="text-black font-bold text-xl">Location:</h2>
+          <span className="font-semibold text-blue-600 text-lg">Ahmedabad, India</span>
+        </div>
+      </motion.div>
+
+      <motion.img
         src="/Profile-photo.png"
-        alt="Profile Image"
-        className="w-40 sm:w-80 mt-20 md:w-105 lg:w-96 h-auto min-w-80  rounded-2xl mb-6 md:mb-0 object-cover shadow-xl  shadow-blue-300"
+        alt="Satish Vaishnav Profile"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+        className="w-40 sm:w-80 mt-15 md:w-105 lg:w-96 h-auto min-w-80 rounded-2xl mb-6 md:mb-0 object-cover shadow-xl shadow-blue-300"
       />
     </section>
   );
