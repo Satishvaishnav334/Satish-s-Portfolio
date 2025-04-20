@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed md:left-1/2 left-1/2 md:w-75   transform -translate-x-1/2 w-[75vw] bg-cyan-200/20 backdrop-blur-md border border-cyan-100/30 h-12 mt-3  rounded-3xl z-50 shadow-lg">
+    <header className="fixed md:left-1/2 left-1/2 md:w-75   transform -translate-x-1/2 w-[80vw] bg-cyan-200/20 backdrop-blur-md border border-cyan-100/30 h-12 mt-3  rounded-3xl z-50 shadow-lg">
       {/* Mobile Menu Toggle */}
       
 
