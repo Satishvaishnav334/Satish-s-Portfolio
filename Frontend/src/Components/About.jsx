@@ -17,14 +17,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12 min-h-screen font-sans"
+      className="flex font-mono flex-col-reverse md:flex-row items-center justify-around px-2 sm:px-6 md:px-5 lg:px-5 py-10 md:py-10 lg:py-10  min-h-screens"
     >
       {/* Info Card */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="w-full max-w-md bg-zinc-300 p-8 rounded-2xl shadow-lg text-left text-black font-mono"
+        className="w-full max-w-md bg-zinc-300 p-8 my-10 rounded-2xl shadow-lg text-left text-black font-mono"
       >
         <motion.h2
           variants={textVariant}
