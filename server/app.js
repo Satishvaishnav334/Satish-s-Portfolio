@@ -2,15 +2,18 @@ import express from "express";
 import cors from "cors";
 import healthRouter from "./routes/healthRoute.js";
 import contactRoute from "./routes/contactRoute.js";
-
+import dotenv from 'dotenv'
+dotenv.config({
+  path:'./.env'
+})
 const app = express();
 app.use(cors())
 app.use(cors({
-  origin:'https://satishvaishnav.in',
+  origin:'https://www.satishvaishnav.in' || process.env.ACCESS_CONTROL_ORIGIN || 'http://localhost:5173/',
   credentials:true
 }))
 
-const allowedOrigins = ['http://localhost:5173', 'https://satishvasihnav.in'];
+const allowedOrigins = [ 'https://www.satishvaishnav.in/'] || [process.env.ACCESS_CONTROL_ORIGIN] ;
 
 app.use(cors({
   origin: function (origin, callback) {
